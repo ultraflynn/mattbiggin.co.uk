@@ -1,0 +1,81 @@
+---
+layout: base
+title: Matt Biggin
+---
+<ol class="breadcrumb">
+  <li class="active"><span class="label label-info">Home</span></li>
+</ol>
+
+<div class="row">
+  <!-- Column 1 -->
+  <div class="col-xs-6">
+    <div class="row">
+      <div class="col-xs-4">
+        <img src="images/avatar.jpg" height="150" width="150" class="img-circle">
+      </div>
+      <div class="col-xs-8">
+        <h1>Hi. I'm Matt Biggin.</h2>
+      </div>
+    </div>
+    <p>
+      I'm a software engineer with 21 years of professional experience working on a broad spectrum of
+      applications mainly in investment banking and financial services. I've spent the last 16 years
+      working as a contractor at various investment banks around the City of London and Canary Wharf.
+      I'm a huge fan of writing clean, well tested, reliable code. I take a great deal of pride in the
+      quality of my work and I enjoy the challenge of working on large well established systems.
+      I also offer freelance software engineering and development services, mainly based around the
+      Java platform.
+    </p>
+    <div class="row">
+      <div class="well">
+        <h3><a href="blog" title="Blog"><span class="label label-warning"><i class="fa fa-rss"></i></span></a>&nbsp;<small>Java, Node.JS, Programming, IDEs, Tools</small></h3>
+        <small>
+          {% for post in site.posts limit:5 %}
+            <h4>
+              <a href="{{ post.url }}/" title="{{ post.title }}">{{ post.title }}</a>
+              <small>{{ post.date | date_to_long_string }}</small>
+            </h4>
+            <div class="row">
+              <div class="col-xs-2">
+                <img src="images/placeholder.jpg" height="75" width="75" class="thumbnail"/>
+              </div>
+              <div class="col-xs-10">
+                {{ post.synopsis }}
+              </div>
+            </div>
+          {% endfor %}
+        </small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Column 2 -->
+  <div class="col-xs-6">
+    <div class="well">
+      <h3><span class="label label-default">Contracting</span>&nbsp;<small>Core Java, Server-side, Enterprise</small></h3>
+      <div>
+        Over the past 15 or so years I have mainly been working as a contractor at various investment banks
+        around the City of London and Canary Wharf. I've worked with a lot of different technologies in that
+        time and seen them used on many varied projects.
+      </div>
+      <br/>
+    </div>
+    <div class="well">
+      <h3><span class="label label-default">Freelance</span>&nbsp;<small>Enterprise Integration, Server-side</small></h3>
+      <div>
+        I offer freelance Java software engineering services with a focus on business services, quality
+        code and enterprise integration. I specialise in server-side processes, Apache Camel and high
+        performance multi-threaded code.
+      </div>
+      <br/>
+    </div>
+    <div class="well">
+      <h3><span class="label label-primary">Availability</span>&nbsp;<small>What can I do for you?</small></h3>
+      <div>
+        I'm currently working for Nomura on a trade processing application, mainly implementing
+        business services and data integration. I'm taking on freelance work for 2014 now though
+        so please get in contact if you need some help.
+      </div>
+    </div>
+  </div>
+</div>

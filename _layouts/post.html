@@ -1,0 +1,18 @@
+---
+layout: base
+---
+<ol class="breadcrumb">
+  <li><a href="/"><span class="label label-default">Home</span></a></li>
+  <li><a href="/blog/"><span class="label label-default">Blog</span></a></li>
+  <li class="active"><span class="label label-info">{{ page.title }}</span></li>
+</ol>
+
+<h4>{{ page.title }}</h4>
+<p class="post-meta">{{ page.date | date_to_string }}
+{% for tag in page.tags %}
+<a href="/tags/#{{ tag }}"><span class="badge">{{ tag }}</span></a>
+{% endfor %}
+</p>
+<div class="post">
+{{ content }}
+</div>

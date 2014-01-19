@@ -1,0 +1,28 @@
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+<img src="avatar.jpg" height="75" width="75" class="img-circle img-responsive">
+    <a class="navbar-brand" href="#"><h1>Matt Biggin</h1></a>
+    <blockquote class="pull-right">
+      <p>Bugs considered harmful...</p>
+      <small>Douglas Crockford in <cite title="Hanselminutes"><a href="http://hanselminutes.com/396/bugs-considered-harmful-with-douglas-crockford">Hanselminutes</a></cite></small>
+    </blockquote>
+  </div>
+
+<script>
+        (function() {
+            var cx = '003325028074190763337:nstgt5wzj74';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:search></gcse:search>
