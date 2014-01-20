@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Placeholders in Apache Camel routes
-tags: [Apache Camel, Java]
-thumbnail: 
+tags: [Apache Camel, Java, Spring]
+thumbnail: /images/placeholder.jpg
 synopsis: Spring property placeholders don't work natively in Apache Camel routes so you have to find workarounds to be able to softcode values in your routes. This post addresses how to do this for the Aggregate EIP.
 ---
 One of the nice things that Spring allows you to do is to add property placeholders to your configuration files and then define the values at runtime. The options are endless as to what you might want to use this feature for. One thing you cannot do though is to use a spring property placeholder inside Camel XML. You can find more details about why here http://camel.apache.org/how-do-i-use-spring-property-placeholder-with-camel-xml.html. Looking specifically at aggregators, imagine you wanted to do this:

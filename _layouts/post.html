@@ -7,12 +7,16 @@ layout: base
   <li class="active"><span class="label label-info">{{ page.title }}</span></li>
 </ol>
 
-<h4>{{ page.title }}</h4>
+<h3 class="clear">
+  <a href="{{ post.url }}" title="{{ post.title }}">{{ page.title }}</a>
+  <small>{{ page.date | date_to_long_string }}</small>
+</h3>
 <p class="post-meta">{{ page.date | date_to_string }}
 {% for tag in page.tags %}
 <a href="/tags/#{{ tag }}"><span class="badge">{{ tag }}</span></a>
 {% endfor %}
 </p>
+<div class="pull-left"><img src="{{ page.thumbnail }}" height="75" width="75" class="thumbnail"/></div>
 <div class="post">
 {{ content }}
 </div>
