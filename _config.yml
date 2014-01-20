@@ -3,4 +3,3 @@ markdown:    redcarpet
 pygments:    false
 permalink:   pretty
 safe:        true
-auto:        true
