@@ -16,6 +16,9 @@ title: Blog - Matt Biggin
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             <small>{{ post.date | date_to_long_string }}</small>
           </h3>
+          {% if post.thumbnail %}
+            <div class="pull-left"><img src="{{ page.thumbnail }}" height="75" width="75" class="thumbnail"/></div>
+          {% endif %}
           {{ post.content }}
         </div>
       </div>

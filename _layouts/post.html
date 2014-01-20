@@ -16,7 +16,9 @@ layout: base
 <a href="/tags/#{{ tag }}"><span class="badge">{{ tag }}</span></a>
 {% endfor %}
 </p>
-<div class="pull-left"><img src="{{ page.thumbnail }}" height="75" width="75" class="thumbnail"/></div>
+{% if page.thumbnail %}
+  <div class="pull-left"><img src="{{ page.thumbnail }}" height="75" width="75" class="thumbnail"/></div>
+{% endif %}
 <div class="post">
 {{ content }}
 </div>

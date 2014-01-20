@@ -38,10 +38,14 @@ title: Matt Biggin
               <small>{{ post.date | date_to_long_string }}</small>
             </h4>
             <div class="row">
-              <div class="col-xs-2">
-                <img src="{{ page.thumbnail }}" height="75" width="75" class="thumbnail"/>
-              </div>
-              <div class="col-xs-10">
+              {% if post.thumbnail %}
+                <div class="col-xs-2">
+                  <img src="{{ post.thumbnail }}" height="75" width="75" class="thumbnail"/>
+                </div>
+                <div class="col-xs-10">
+              {% else %}
+                <div class="col-xs-12">
+              {% endif %}
                 {{ post.synopsis }}
               </div>
             </div>
