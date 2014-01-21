@@ -2,7 +2,7 @@
 layout: post
 title: SEDA queue sizes and importance of reading API docs
 tags: [Apache Camel, Java, Seda]
-synopsis: TODO
+synopsis: I wanted the queue lengths of my SEDA queues output to the log file at runtime and decided to add that feature. I should have read the API docs better because I got an unwanted side-affect.
 ---
 One of the key benefits of a SEDA queue is the ability to buffer requests and tasks within an Apache Camel route. You split up your processing into discrete tasks and then wire these tasks together using SEDA queues. You can then tune the number of consumers you have running against the queues to get the throughput that you need. To be able to do this tuning you need to know the back pressure on the consumers, i.e. the size of the SEDA queues. A simple way to do this is to use JMX to connect via JConsole and inspect the size of the SEDA queues but that involves starting a process and drilling down through a graphical UI. It’s a lot easier to have the queues depths output to the log file regularly so you can review the sizes over time.
  
