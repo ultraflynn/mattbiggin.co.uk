@@ -17,7 +17,7 @@ title: Blog - Matt Biggin
             <small>{{ post.date | date_to_long_string }}</small>
           </h3>
           {% if post.thumbnail %}
-            <div class="pull-left"><img src="{{ page.thumbnail }}" height="75" width="75" class="thumbnail"/></div>
+            <div class="pull-left"><img src="{{ post.thumbnail }}" height="75" width="75" class="thumbnail"/></div>
           {% endif %}
           {{ post.content }}
         </div>
