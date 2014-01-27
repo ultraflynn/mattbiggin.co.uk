@@ -10,7 +10,9 @@ After adding categories you get some new urls in this form:
 
     http://yoursite.co.uk/categoryN
 
-These could then be added to a header to allow users to view different categories of post on your site.
+Posts which are assigned to this category will then have URLs with that as a prefix.
+
+These could then be added to a header to allow users to view different categories of posts on your site.
 
 Here's my solution.
 
@@ -29,28 +31,27 @@ In each of these category directories you create an `index.html` which contains 
     layout: base
     title:  Category Title
     ---
-    {% for post in site.categories.category1 %}
-      {% include summary.html %}
-    {% endfor %}
+    {{ "{%" }} for post in site.categories.categoryN %}
+       {{ "{%" }} include summary.html %}
+    {{ "{%" }} endfor %}
 
-Critical thing to remember is that the line `{% for post in site.categories.category1 %}` has to refer to the directory name that the `index.html` is in. So in this case that would be "category1".
+Critical thing to remember is that the line `{{ "{%" }} for post in site.categories.category1 %}` has to refer to the directory name that the `index.html` is in. So in this case that would be "categoryN".
 
 #### Create a post summary include
 Notice in the `index.html` file there is an include of `summary.html`. That file looks like this:
 
     <article class="excerpt">
       <div class="meta-title">
-        <h3 class="clear">
-          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <h3 class="clear"> <a href="{{ post.url }}" title="{{ "{{" }} post.title }}">{{ "{{" }} post.title }}</a>
         <br/>
-        <small>{{ post.date | date_to_long_string }}</small>
-        {% for tag in post.tags %}
-          <a href="/tags/#{{ tag }}"><span class="badge">{{ tag }}</span></a>
-        {% endfor %}
+        <small>{{ "{{" }} post.date | date_to_long_string }}</small>
+        {{ "{%" }} for tag in post.tags %}
+          <a href="/tags/#{{ "{{" }} tag }}"><span class="badge">{{ "{{" }} tag }}</span></a>
+        {{ "{%" }} endfor %}
        </h3>
       </div>
       <div class="post-content">
-        <p>{{ post.content | strip_html | truncatewords: 100 }}</p>
+        <p>{{ "{{" }} post.content | strip_html | truncatewords: 100 }}</p>
       </div>
     </article>
 
@@ -66,8 +67,16 @@ Now you can assign categories to each of your blog posts by adding this to the h
 On the site I used this one I chose to only assign on category per post but there is nothing stopping you from assigning multiple categories per post.
 
 #### Add some flair
-Finally you could add some flair so that people can see what category a post is assigned to.
+Finally you could add some flair so that people can see what category a post is assigned to. Wherever you output a post title you add something like this in before it:
 
-TODO
+    {{ "{%" }} for category in post.categories %}
+      {{ "{%" }} if category == 'pc' %}
+         <span class="label label-primary"><i class="fa fa-wrench"></i></span>
+      {{ "{%" }} elsif category == 'gaming' %}
+         <span class="label label-warning"><i class="fa fa-gamepad"></i></span>
+      {{ "{%" }} elsif category == 'running' %}
+         <span class="label label-success"><i class="fa fa-trophy"></i></span>
+      {{ "{%" }} endif %}
+    {{ "{%" }} endfor %}
 
 You can see the result of this on [ultraflynn.com](http://ultraflynn.com/) 
