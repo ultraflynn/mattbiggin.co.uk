@@ -31,18 +31,12 @@ title: Blog - Matt Biggin
   <div class="col-xs-4">
     <h4>Latest Posts <small><a href="/archive/">see them all</a></small></h4>
     <p>
-      <table class="table">
-        {% for post in site.posts limit:10 %}
-        <tr>
-          <td><small>{{ post.date | date_to_string }}</small></td>
-          <td>
-            <a href="{{ post.url }}" title="{{ post.title }}"> 
-              <div>{{ post.title }}</div>
-            </a>
-          </td>
-        </tr>
-        {% endfor %}
-      </table>
+      {% for post in site.posts limit:10 %}
+        <div>
+          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+          <small>{{ post.date | date_to_string }}</small>
+        </div>
+      {% endfor %}
     </p>
     <br/>
     <h4>Tag Cloud <small><a href="/tags/">see them all</a></small></h4>
