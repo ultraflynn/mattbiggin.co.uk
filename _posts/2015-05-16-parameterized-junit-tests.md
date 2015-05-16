@@ -96,7 +96,7 @@ public class UsernameTest {
             // ... etc, etc, etc
     });
     
-    @Parameters(name = "{0} - {1} should be {2}")
+    @Parameters(name = "{0}")
     public static Collection<Object[]> testCases() {
         return TEST_CASES;
     }
