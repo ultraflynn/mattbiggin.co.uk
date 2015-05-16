@@ -2,3 +2,6 @@ _site/
 *.sublime*
 
 *.log
+
+# OSX
+.DS_Store

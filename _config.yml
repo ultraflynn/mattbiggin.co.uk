@@ -1,5 +1,5 @@
-name:        Matt Biggin
-markdown:    redcarpet
-pygments:    false
-permalink:   pretty
-safe:        true
+name:           Matt Biggin
+markdown:       redcarpet
+highlighter:    pygments
+permalink:      pretty
+safe:           true
