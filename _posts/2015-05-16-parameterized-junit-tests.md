@@ -92,7 +92,7 @@ public class UsernameTest {
             {"Numeric characters only", "123",          true},
             {"Mixed case",              "validValid",   true},
             {"Lowercase",               "valid",        true},
-            {"Uppercase",               "VAlID",        true}
+            {"Uppercase",               "VALID",        true}
             // ... etc, etc, etc
     });
     
