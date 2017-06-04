@@ -1,5 +1,4 @@
 name:           Matt Biggin
-markdown:       redcarpet
 highlighter:    rouge
 permalink:      pretty
 safe:           true
